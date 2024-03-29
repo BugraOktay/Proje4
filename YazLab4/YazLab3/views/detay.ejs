@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yayın Bilgileri</title>
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    #divv {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+
+
+    p {
+      margin: 10px 0;
+    }
+
+    strong {
+      color: #100f10;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Web Scraping Akademi Yayın Bilgileri</h1>
+    </header>
+ 
+    <br><br>
+  <div id="divv">
+    <p><strong>Yayın ID:</strong> <%= documents[0]._id %></p>
+    <p><strong>Yayın Adı:</strong> <%= documents[0].Ad %></p>
+    <p><strong>Yazarların İsimleri:</strong> <%= documents[0].Yazarlar %></p>
+    <p><strong>Yayın Türü:</strong> Makale</p>
+    <p><strong>Birincil Dil:</strong> <%= documents[0]['Birincil Dil'] %></p>
+    <p><strong>Yayımlanma Tarihi:</strong> <%= documents[0]['Yayımlanma Tarihi'] %></p>
+    <p><strong>Anahtar Kelimeler (Arama Motorunda):</strong> <%= documents[0].ArananKelime %></p>
+    <p><strong>Anahtar Kelimeler (Makaleye Ait):</strong> <%= documents[0].MetindekiAnahtarKelimeler %></p>
+    <p><strong>URL Adresi:</strong> <a href=<%= documents[0].Url %>><%= documents[0].Url %></a></p>
+    <p><strong>Referanslar:</strong> <%= documents[0].Referans %></p>
+    <p><strong>Özet:</strong> <%= documents[0].Özet %></p>
+    
+    
+  </div>
+
+  
+
+      
+</body>
+</html>
